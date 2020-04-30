@@ -13,11 +13,11 @@ class Application
           resp.write item.price
         else
           resp.status = 400
-          resp.write = "Item Not Found"
+          resp.write "Item Not Found"
         end
       else
         resp.status = 404
-        resp.write = "Path Not Found"
+        resp.write "Path Not Found"
       end
       resp.finish
   end
