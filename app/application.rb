@@ -10,11 +10,11 @@ class Application
         Item.each do |item|
           if item == env
           resp.write "#{item}\n"
-          else
-            resp.status = 404
-            resp.write = "Path Not Found"
           end
         end
+      else
+        resp.status = 404
+        resp.write = "Path Not Found"
       end
       resp.finish
   end
