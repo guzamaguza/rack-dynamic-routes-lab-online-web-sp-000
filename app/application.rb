@@ -10,7 +10,7 @@ def call(env)
       resp.status = 404
       resp.write "Path Not Found"
     end
-      
+
       if @@cart == []
         resp.write "Your cart is empty"
       else
