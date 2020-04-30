@@ -8,11 +8,11 @@ class Application
 
       if req.path.match(/items/)
         Item.each do |item|
-          if item == env 
+          if item == env
           resp.write "#{item}\n"
           else
-            resp.status = 404 
-            resp.write = "Path Not Found" 
+            resp.status = 404
+            resp.write = "Path Not Found"
           end
         end
       resp.finish
